@@ -1,0 +1,79 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .movie-card {
+    @apply relative overflow-hidden rounded-lg shadow-lg transition-all duration-300;
+  }
+
+  .movie-card:hover {
+    @apply shadow-xl transform -translate-y-1;
+  }
+
+  .movie-info {
+    @apply p-4 bg-white;
+  }
+
+  .movie-card img {
+    @apply w-full h-auto object-cover;
+  }
+
+  .color-prime {
+    @apply bg-red-500 bg-opacity-10;
+  }
+
+  .color-fibonacci {
+    @apply bg-orange-500 bg-opacity-10;
+  }
+
+  .color-even {
+    @apply bg-yellow-500 bg-opacity-10;
+  }
+
+  .color-odd {
+    @apply bg-green-500 bg-opacity-10;
+  }
+
+  /* Estilos para los botones de idioma y categoría */
+  .language-button {
+    @apply px-3 py-1 rounded transition-colors duration-200;
+  }
+
+  .language-button.active {
+    @apply bg-blue-500 text-white;
+  }
+
+  .language-button:not(.active) {
+    @apply bg-gray-200 hover:bg-gray-300;
+  }
+
+  .category-button {
+    @apply px-4 py-2 rounded whitespace-nowrap transition-colors duration-200;
+  }
+
+  .category-button.active {
+    @apply bg-blue-500 text-white;
+  }
+
+  .category-button:not(.active) {
+    @apply bg-gray-200 hover:bg-gray-300;
+  }
+
+  .modal-backdrop {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
+  }
+
+  .modal-content {
+    @apply bg-white rounded-lg max-w-2xl w-full p-6 max-h-[90vh] overflow-y-auto;
+  }
+
+  .loader {
+    @apply flex justify-center py-8;
+  }
+
+  .loader-spinner {
+    @apply animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500;
+  }
+}
